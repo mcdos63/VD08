@@ -21,6 +21,9 @@ def index():
         resp = requests.get(sites[st]['url'], headers={'X-Api-Key': sites[st]['key']})
         print(st, '|', resp.json())
         data = resp.json()
+        if not data:
+            return "API не вернул данных"
+        
         res = data[0]
         match st:
             case 0:
@@ -32,8 +35,7 @@ def index():
             case 2:
                 question = res['quote']
                 answer = res['author']
-        if not data:
-            return "API не вернул данных"
+
     except Exception as e:
         return f"Ошибка при запросе к API: {resp.status_code} - {e}"
 
