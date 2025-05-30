@@ -8,7 +8,6 @@ sites = [{'url': 'https://api.api-ninjas.com/v1/trivia',
          {'url': 'https://quoteslate.vercel.app/api/quotes/random',
           'key': ''}]
 app = Flask(__name__)
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     selected_value = "0"  # Значение по умолчанию
