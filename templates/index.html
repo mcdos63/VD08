@@ -8,12 +8,12 @@
 <body>
 <h3>Выберите значение:</h3>
 <form method="POST" action="/">
-        <input type="radio" value="0" name="options" autocomplete="off" checked>
-        <label>Сайт 1</label>
-        <input type="radio" value="1" name="options" autocomplete="off">
-        <label>Сайт 2</label>
-        <input type="radio" value="2" name="options" autocomplete="off">
-        <label>Сайт 3</label>
+    <input type="radio" value="0" name="options" autocomplete="off" checked>
+    <label>Сайт 1</label>
+    <input type="radio" value="1" name="options" autocomplete="off">
+    <label>Сайт 2</label>
+    <input type="radio" value="2" name="options" autocomplete="off">
+    <label>Сайт 3</label>
 
     <p>Вопрос: {{ question | safe }}</p>
     <p>Ответ: {{ answer | safe }}</p>
