@@ -23,7 +23,7 @@ def index():
         data = resp.json()
         if not data:
             return "API не вернул данных"
-        
+
         res = data[0]
         match st:
             case 0:
@@ -39,8 +39,7 @@ def index():
     except Exception as e:
         return f"Ошибка при запросе к API: {resp.status_code} - {e}"
 
-    return render_template('index.html', question=question, answer=answer, selected_value=selected_value,
-                           selected_text=sites[st]['url'])
+    return render_template('index.html', question=question, answer=answer, selected_text=sites[st]['url'])
 
 if __name__ == "__main__":
     app.run(debug=True)
